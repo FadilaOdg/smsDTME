@@ -22,14 +22,9 @@ class MessageController extends Controller
     }
 	
 	public function store(Request $request){
-		echo "bonjour";
-		Message::create([
-             'libelle' =>$request->libelle,
-            'contacts_id' =>$request->contacts_id,
-            
-        ]);
 
-        return view('message.create')->with('success','Le contact a été ajouté au groupe sélectionné.');
+		print_r($request);
+		
     }
 	
 	public function sendgroupsms(Request $groupsdest){
